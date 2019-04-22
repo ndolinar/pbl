@@ -1,0 +1,40 @@
+{
+	"env": {
+		"browser": true,
+		"commonjs": true,
+		"es6": true,
+		"node": true
+	},
+	"extends": ["eslint:recommended", "plugin:react/recommended"],
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 2018,
+		"sourceType": "module"
+	},
+	"plugins": ["react"],
+	"rules": {
+		"indent": ["error", "tab", { "SwitchCase": 1, "flatTernaryExpressions": true }],
+		"quotes": ["error", "single", { "avoidEscape": true }],
+		"semi": ["error", "always"], // http://eslint.org/docs/rules/semi
+		"no-extra-semi": "error", // http://eslint.org/docs/rules/no-extra-semi
+		"no-cond-assign": ["error", "always"], // http://eslint.org/docs/rules/no-cond-assign
+		"no-param-reassign": ["error"],
+		"eqeqeq": ["error", "always"], // http://eslint.org/docs/rules/eqeqeq
+		"no-unreachable": "error", // http://eslint.org/docs/rules/no-unreachable
+		"curly": ["error", "multi-line"], // http://eslint.org/docs/rules/dot-notation
+		"default-case": "error", // http://eslint.org/docs/rules/default-case
+		"dot-notation": "error",
+		"no-eq-null": "error", // http://eslint.org/docs/rules/no-eq-null
+		"react/prop-types": 0,
+		"no-console": 0
+	},
+	"settings": {
+		"react": {
+			"pragma": "React",
+			"version": "16.7.0"
+		}
+	}
+}
