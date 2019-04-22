@@ -1,0 +1,16 @@
+root = true
+
+[*]
+# file character encoding
+charset = utf-8
+# tab | space
+indent_style = tab
+# line wrapping after amount specified
+max_line_length = 100
+# remove whitespace at the end of lines
+trim_trailing_whitespace = true
+# file should end with a newline
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
