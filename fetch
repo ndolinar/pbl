@@ -1,0 +1,16 @@
+export const fetchJson = (endpoint, signal) => {
+	return new Promise((resolve, reject) => {
+		return fetch(`${ROOT_URL}${endpoint}`, {
+			method: 'GET',
+			signal: signal,
+			headers: {
+				'Content-Type': 'application/json',
+				Authorization: getToken(),
+			},
+		})
+			.then(res => (res.status === 404 ? undefined : res.ok ? res : reject(res)))
+			.then(res => (res ? res.json() : undefined))
+			.then(res => resolve(res))
+			.catch(err => reject(err));
+	});
+};
